@@ -1,0 +1,81 @@
+[{
+    "id": 1,
+    "name": "Nestea - Iced Tea",
+    "price": 2,
+    "img": "http://dummyimage.com/250x250.png/F19A3E/ffffff",
+    "category": "drinks",
+    "stock": 31,
+    "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius."
+  }, {
+    "id": 2,
+    "name": "Lobster Mac’ Cheese",
+    "price": 5,
+    "img": "http://dummyimage.com/250x250.png/ff4444/ffffff",
+    "category": "food",
+    "stock": 3,
+    "description": "Crusted with main lobster."
+  }, {
+    "id": 3,
+    "name": "Coffee - 10oz Cup 92961",
+    "price": 1,
+    "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
+    "category": "drinks",
+    "stock": 2,
+    "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst."
+  }, {
+    "id": 4,
+    "name": "Monster Energy",
+    "price": 2,
+    "img": "http://dummyimage.com/250x250.png/82D173/ffffff",
+    "category": "muebles",
+    "stock": 64,
+    "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
+  }, {
+    "id": 5,
+    "name": "BÉKÉSI - Palinka",
+    "price": 15,
+    "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
+    "category": "drinks",
+    "stock": 55,
+    "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus."
+  }, {
+    "id": 6,
+    "name": "Prunes - Pitted",
+    "price": 3,
+    "img": "http://dummyimage.com/250x250.png/ff4444/ffffff",
+    "category": "food",
+    "stock": 22,
+    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum."
+  }, {
+    "id": 7,
+    "name": "Coffee - Decaffeinato Coffee",
+    "price": 1,
+    "img": "http://dummyimage.com/250x250.png/cc0000/ffffff",
+    "category": "drinks",
+    "stock": 55,
+    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus."
+  }, {
+    "id": 8,
+    "name": "Snails - Large Canned",
+    "price": 6,
+    "img": "http://dummyimage.com/250x250.png/ff4444/ffffff",
+    "category": "food",
+    "stock": 73,
+    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis."
+  }, {
+    "id": 9,
+    "name": "Beets Salad",
+    "price": 13,
+    "img": "http://dummyimage.com/250x250.png/ff4444/ffffff",
+    "category": "food",
+    "stock": 48,
+    "description": "organic baby greens, dijon citrus dressing, goat cheese"
+  }, {
+    "id": 10,
+    "name": "Baby Spinach Salad",
+    "price": 15,
+    "img": "http://dummyimage.com/250x250.png/D7EBBA/ffffff",
+    "category": "food",
+    "stock": 9,
+    "description": "dolce gorgonzola, cherry tomato, walnut balsamic vinaigrette, caramelized walnut "
+  }]
