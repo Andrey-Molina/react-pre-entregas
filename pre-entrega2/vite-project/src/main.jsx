@@ -5,8 +5,8 @@ import './Main.scss'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React>
+  <React.StrictMode>
       <App/>
       {/*ctrl+b to jump to the declaration*/}
-  </React>
+  </React.StrictMode>,
 )
