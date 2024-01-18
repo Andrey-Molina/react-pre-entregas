@@ -1,5 +1,5 @@
 
-const Boton = ({ children, className = "", onClick }) => {
+const Button = ({ children, className = "", onClick }) => {
 
   return (
     <button
@@ -10,4 +10,4 @@ const Boton = ({ children, className = "", onClick }) => {
   );
 };
 
-export default Boton;
+export default Button;

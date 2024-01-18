@@ -1,23 +1,21 @@
-import { useState } from "react";
-import Boton from "../../ejemplos/Boton";
+import {useContext, useState} from "react";
+import Button from "../Button/Button.jsx";
 import QuantitySelector from "./QuantitySelector.jsx";
-import ColorSelector from "./ColorSelector.jsx";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import {CartContext} from "../../context/CartContext.jsx";
 
 
 const ItemDetail = ({ item }) => {
-  const [cantidad, setCantidad] = useState(1)
-  // const [color, setColor] = useState("")
   const navigate = useNavigate()
+  const [cantidad, setCantidad] = useState(1)
+  const {addToCart, isInCart}= useContext(CartContext)
 
   const handleAgregar = () => {
     const itemToCart = {
       ...item,
-      cantidad, // => cantidad: cantidad
-      color // => color: color
+      cantidad
     }
-
-    console.log(itemToCart)
+    addToCart(itemToCart)
   }
 
   const handleVolver = () => {
@@ -26,25 +24,26 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="container m-auto mt-8">
-      <Boton onClick={handleVolver}>Volver</Boton>
+      <Button onClick={handleVolver}>Volver</Button>
       <h3 className="mt-4 text-2xl font-semibold">{item.name}</h3>
-      <hr />
-
-
+      <hr/>
       <div className="flex gap-8 pt-4">
         <img src={item.img} alt={item.name} />
-
         <div>
           <p>{item.description}</p>
           <p className="text-xl font-bold">Precio: ${item.price}</p>
-
-          <QuantitySelector 
-            cantidad={cantidad}
-            stock={item.stock}
-            setCantidad={ setCantidad }
-          />          
-
-          <Boton onClick={handleAgregar}>Agregar al carrito</Boton>
+          {
+            isInCart( item.id )
+                ? <Button><Link to="/cart">Terminar mi compra</Link></Button>
+                : <>
+                  <QuantitySelector
+                      cantidad={cantidad}
+                      stock={item.stock}
+                      setCantidad={ setCantidad }
+                  />
+                  <Button onClick={handleAgregar} disabled={item.stock === 0}>Agregar al carrito</Button>
+                </>
+          }
         </div>
       </div>
     </div>

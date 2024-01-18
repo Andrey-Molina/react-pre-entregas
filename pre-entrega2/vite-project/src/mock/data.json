@@ -27,7 +27,7 @@
     "name": "Monster Energy",
     "price": 2,
     "img": "http://dummyimage.com/250x250.png/82D173/ffffff",
-    "category": "muebles",
+    "category": "drinks",
     "stock": 64,
     "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede."
   }, {
@@ -77,5 +77,5 @@
     "img": "http://dummyimage.com/250x250.png/D7EBBA/ffffff",
     "category": "food",
     "stock": 9,
-    "description": "dolce gorgonzola, cherry tomato, walnut balsamic vinaigrette, caramelized walnut "
+    "description": "dolce gorgonzola, cherry tomato, walnut balsamic vinaigrette, caramelized walnut"
   }]
