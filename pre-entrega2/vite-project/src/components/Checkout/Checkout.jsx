@@ -7,8 +7,8 @@ const Checkout = () => {
   const { cart, totalCart, clearCart } = useContext(CartContext);
 
   const [values, setValues] = useState({
-    nombre: "",
-    direccion: "",
+    name: "",
+    address: "",
     email: "",
   });
 
@@ -24,7 +24,7 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const orden = {
+    const order = {
       cliente: values,
       items: cart,
       total: totalCart(),
@@ -33,22 +33,18 @@ const Checkout = () => {
 
     const ordersRef = collection(db, "orders");
 
-    addDoc(ordersRef, orden).then((doc) => {
+    addDoc(ordersRef, order).then((doc) => {
         setOrderId(doc.id)
         clearCart()
-
-        // Swal.fire("Gracias por tu compra!")
     });
-
-
   };
 
   if (orderId) {
     return (
       <div className="container m-auto mt-10">
-        <h2 className="text-4xl font-semibold">Gracias por tu compra</h2>
+        <h2 className="text-4xl font-semibold">Thank you for your purchase.</h2>
         <hr />
-        <p>Tu código de orden es: {orderId}</p>
+        <p>Your order code is: {orderId}</p>
       </div>
     );
   }
@@ -58,7 +54,7 @@ const Checkout = () => {
       <h2 className="text-4xl font-semibold">Checkout</h2>
       <hr />
 
-      <h4>Ingresta tus datos:</h4>
+      <h4>Enter your details:</h4>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-4 max-w-md mt-4"
@@ -66,19 +62,19 @@ const Checkout = () => {
         <input
           className="border p-2"
           type="text"
-          placeholder="Nombre"
-          value={values.nombre}
+          placeholder="Name"
+          value={values.name}
           onChange={handleInputChange}
-          name="nombre"
+          name="name"
         />
 
         <input
           className="border p-2"
           type="text"
-          placeholder="Dirección"
-          value={values.direccion}
+          placeholder="Address"
+          value={values.address}
           onChange={handleInputChange}
-          name="direccion"
+          name="address"
         />
         <input
           className="border p-2"
@@ -89,7 +85,7 @@ const Checkout = () => {
           name="email"
         />
         <button type="submit" className="bg-blue-500 text-white py-2">
-          Enviar
+            Send
         </button>
       </form>
     </div>
@@ -97,14 +93,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
-// const [nombre, setNombre] = useState("")
-// const [direccion, setDireccion] = useState("")
-
-// const handleNombre = (e) => {
-//     setNombre(e.target.value)
-// }
-
-// const handleDireccion = (e) => {
-//     setDireccion(e.target.value)
-// }

@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) => {
   const [cantidad, setCantidad] = useState(1)
   const {addToCart, isInCart}= useContext(CartContext)
 
-  const handleAgregar = () => {
+  const handleAdd = () => {
     const itemToCart = {
       ...item,
       cantidad
@@ -24,24 +24,24 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="container m-auto mt-8">
-      <Button onClick={handleVolver}>Volver</Button>
+      <Button onClick={handleVolver}>Back</Button>
       <h3 className="mt-4 text-2xl font-semibold">{item.name}</h3>
       <hr/>
       <div className="flex gap-8 pt-4">
         <img src={item.img} alt={item.name} />
         <div>
           <p>{item.description}</p>
-          <p className="text-xl font-bold">Precio: ${item.price}</p>
+          <p className="text-xl font-bold">Price: ${item.price}</p>
           {
             isInCart( item.id )
-                ? <Button><Link to="/cart">Terminar mi compra</Link></Button>
+                ? <Button><Link to="/cart">Proceed to checkout</Link></Button>
                 : <>
                   <QuantitySelector
                       cantidad={cantidad}
                       stock={item.stock}
                       setCantidad={ setCantidad }
                   />
-                  <Button onClick={handleAgregar} disabled={item.stock === 0}>Agregar al carrito</Button>
+                  <Button onClick={handleAdd} disabled={item.stock === 0}>Add to cart</Button>
                 </>
           }
         </div>

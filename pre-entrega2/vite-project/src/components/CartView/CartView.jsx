@@ -13,8 +13,8 @@ const CartView = () => {
 
     return (
         <section className="container m-auto mt-8">
-            <p>Bienvenido</p>
-            <h2 className="text-4xl font-semibold">Tu Compra</h2>
+            <p>Welcome</p>
+            <h2 className="text-4xl font-semibold">Your Order</h2>
             <hr />
 
             <ul>
@@ -24,7 +24,7 @@ const CartView = () => {
                         <div>
                             <h3 className="text-2xl">{item.name}</h3>
                             <p className="text-2xl font-bold">$ {item.price * item.cantidad}</p>
-                            <p>Cantidad: {item.cantidad}</p>
+                            <p>Quantity: {item.cantidad}</p>
                             <Button onClick={() => removeItem(item.id)}>
                                 <img src={deleteIcon} alt="trashIcon"/>
                             </Button>
@@ -34,8 +34,8 @@ const CartView = () => {
             </ul>
 
             <h4 className="text-4xl font-semibold">TOTAL: ${totalCart()}</h4>
-            <Button onClick={clearCart}>Vaciar carrito</Button>
-            <Button><Link to="/checkout">Terminar mi compra</Link></Button>
+            <Button onClick={clearCart}>Empty cart</Button>
+            <Button><Link to="/checkout">Proceed to checkout</Link></Button>
         </section>
     );
 };

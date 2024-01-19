@@ -4,7 +4,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import {Navbar} from "./components/Navbar/Nabvar.jsx";
 import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
-import {CartContext} from "./context/CartContext.jsx";
 import {useState} from "react";
 import CartView from "./components/CartView/CartView.jsx";
 import { CartProvider } from "./context/CartContext";
@@ -12,8 +11,6 @@ import Checkout from "./components/Checkout/Checkout.jsx";
 
 
 function App() {
-
-    const [cart, setCart] = useState([])
   return (
       <CartProvider>
         <BrowserRouter>
@@ -33,7 +30,3 @@ function App() {
 }
 
 export default App
-
-// Im going to clarify then why the making of this site:
-// So that tomorrow, the day i need to actually implement a site I will already have a prototype of
-// what a website developed in react looks like
