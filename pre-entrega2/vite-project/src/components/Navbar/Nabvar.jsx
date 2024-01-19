@@ -10,7 +10,6 @@ export const Navbar = () => {
               <Link to={"/"} className="mx-2" >Home</Link>
               <Link to={"/productos/drinks"} className="mx-2" >Drinks</Link>
               <Link to={"/productos/food"} className="mx-2" >Food</Link>
-              <Link to="" className="mx-2" >Contact</Link>
               {/*section.class> for emmet completion*/}
               <Link to={""}><CartWidget/></Link>
           </div>
